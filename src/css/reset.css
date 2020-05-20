@@ -1,0 +1,28 @@
+/*THE RESET STYLESHEET*/
+html, body, nav, div, span, p, h1, h2, h3, h4, h5, h6, a, img, form, fieldset, legend, label, input, select, button, ul, ol,li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    line-height: baseline;
+    box-sizing: border-box;
+    white-space: 0;
+}
+
+/*Removed so scroll check can work*/
+/* html, body {
+    height: 100%;
+} */
+
+p + p {
+    margin-top: 1em;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}

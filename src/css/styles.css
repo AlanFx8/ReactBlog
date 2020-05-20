@@ -1,0 +1,483 @@
+/*The Stylesheet*/
+@import url('reset.css');
+
+/*Import Google Font(s)*/
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Literata&display=swap');
+
+/************************/
+/*MAIN COMPONENT STYLES*/
+/**********************/
+body {
+    background-color: #888;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+#root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#contentContainer {
+    flex: 1;
+    width: 90%;
+    margin: auto;
+}
+
+#mainHeader {
+    order: -1;
+    height: 8em;
+    border-bottom: solid 1px #ffffff;
+}
+
+#headerInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 100%;
+
+    background-color: #444;
+    background-image: url('../img/banner.jpg');
+    background-size: 100% 200%;
+    background-position-y: 30%;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px #b2f3f7;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1em;
+    font-style: italic;
+}
+
+#mainFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #000000;
+    color: #ffffff;
+    border-top: solid 1px #ffffff;
+    border-bottom: solid 1px #ffffff;
+    height: 4em;
+    text-align: center;
+}
+
+#dateObject {
+    margin-bottom: .5em;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Crimson Text', serif;
+}
+
+/*************/
+/*NAVIGATION*/
+/***********/
+#mainNav {
+    order: -1;
+    background-color: rgba(0, 218, 218, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8em;
+    border-bottom: solid 1px #000000;
+}
+
+#mainNav.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#mainNav-bar-small {
+    outline: solid 1px #aaaaaa;
+    width: 100%;
+    height: 2em;
+    text-align: center;
+}
+
+#mainNav-bar-med {
+    width: 80%;
+    display: none;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#mainNav-bar-med li {
+    width: 100%;
+    background-color: rgba(0, 155, 95, 0.5);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all .5s;
+}
+
+#mainNav-bar-med li:hover {
+    display: block;
+    background-color: rgba(3, 70, 194, 0.25);
+    font-style: italic;
+    box-shadow: 0 0 2px 2px rgb(108, 255, 248, .5);
+}
+
+#mainNav-bar-med a {
+    text-decoration: none;
+    line-height: 2em;
+    color: #000000;
+    display: block;
+    transition: all .5s;
+}
+
+#mainNav-bar-med a:hover {
+    color: rgb(108, 255, 248);
+}
+
+/********************/
+/*BLOG POSTS STYLES*/
+/******************/
+.blogPost, #intro {
+    padding: .5em;
+    border: solid 1px #000;
+    font-family: 'Literata', serif;
+    background-color: rgba(255, 255, 255, .5);
+    margin: .5em 0;
+}
+
+.postImageLink {
+    display: block;
+}
+
+.postImage {
+    width: 80%;
+    max-width: 203px;
+    height: 126px;
+    font-size: 0;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.postImage:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+/********************/
+/*SLIDE SHOW STYLES*/
+/******************/
+#slideShowOb {
+    display: block;
+    background: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.slideShowImage {
+    display: block;
+    position: absolute;
+    box-shadow: rgba(150, 150, 150, .5) 0 0 5px;
+    cursor: pointer;
+}
+
+/**************/
+/*FORM STYLES*/
+/************/
+#postGeneratorForm {
+    border: solid 1px #000;
+    margin-top: .5em;
+}
+
+#formIntro {
+    text-align: center;
+}
+
+#formButtonWrapper {
+    background-color: rgb(0, 0, 255, .5);
+    padding: .5em;
+    border-bottom: solid 1px #000;
+}
+
+#formButtonWrapper > button {
+    width: 70%;
+    margin: auto;
+}
+
+#formButtonWrapper > button + button {
+    margin-top: .75em;
+}
+
+#formContent {
+    background-color: rgb(173, 216, 230, .5);
+    padding: .5em;
+    border-bottom: solid 1px #000;
+}
+
+#submitWrapper {
+    background-color: rgba(0, 170, 170, 0.5);
+    padding: .5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formBTN {
+    background-color: teal;
+    font-weight: bold;
+    width: 40%;
+    padding: .5em;
+    border: solid 1px #000000;
+    border-radius: .5em;
+}
+
+.formBTN:hover {
+    background-color: skyblue;
+    font-style: italic;
+}
+
+/*Textnox and Images*/
+.textboxWrapper {
+    position: relative;
+    padding: .5em;
+    background-color: lightskyblue;
+    border: solid 1px #000;
+    margin-top: .5em;
+}
+
+.imageWrapper {
+    position: relative;
+    padding: .5em;
+    background-color: rgb(197, 146, 155);
+    border: solid 1px #000;
+    margin-top: .5em;
+}
+
+.imageWrapper > input[type="file"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.textboxWrapper > textarea {
+    display: block;
+    margin: .5em auto;
+    width: 80%;
+    resize: none;
+    outline: none;
+    border: solid 1px #000;
+    padding: .5em;
+}
+
+.deleteBTN {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    background-color: transparent;
+    opacity: .8;
+}
+
+.deleteBTN:hover {
+    font-weight: bold;
+}
+
+/*Image File Wrapper*/
+.imgFileWrapper {
+    margin-top: .5em;
+}
+
+.imgFileWrapper > div {
+    font-weight: bold;
+}
+
+.imgFileWrapper > label {
+    width: 48%;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(199, 96, 255);
+    padding: .25em;
+    border-radius: .5em;
+}
+
+.imgFileWrapper > label:hover {
+    cursor: pointer;
+    font-style: italic;
+    background-color: rgb(226, 154, 255);
+}
+
+/*Edit buttons*/
+.editButtonsWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: .5em;
+}
+
+.editButtonsWrapper > button {
+    background-color: rgb(2, 113, 218);
+    width: 48%;
+    padding: .25em;
+    border-radius: .5em;
+    font-weight: bold;
+}
+
+.editButtonsWrapper > button:hover {
+    background-color: rgb(68, 117, 253);
+    font-style: italic;
+}
+
+.imageWrapper > .editButtonsWrapper > button {
+    background-color: blueviolet;
+}
+
+.imageWrapper > .editButtonsWrapper > button:hover {
+    background-color: rgb(142, 70, 208);
+}
+
+/*Success and Failure divs*/
+#successMsg {
+    border: solid 1px green;
+    background-color: lightgreen;
+    color: green;
+    padding: .5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#failMsg {
+    border: solid 1px rgb(95, 14, 14);
+    background-color: rgb(209, 94, 94);
+    color: rgb(95, 14, 14);
+    padding: .5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+/********/
+/*OTHER*/
+/******/
+#loadingMessage {
+    background-color: rgb(94, 94, 94, .6);
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding: .5em;
+    border-radius: .4;
+}
+
+#noResultsMessage {
+    background-color: rgba(0, 83, 83, 0.6);
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding: .5em;
+    border: solid 2px rgb(0, 73, 73);
+    border-radius: .5em;
+}
+
+/****************/
+/*SCROLL BUTTON*/
+/**************/
+#scrollButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 48px;
+    height: 48px;
+    background: #80A1B2;
+    border: solid 1px #000;
+    
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    
+    opacity: 0;
+    transition-property: background-color, opacity;
+    transition-duration: .5s;
+}
+
+#scrollButton.active {
+    opacity: 1;
+}
+
+#scrollButton.active:hover {
+    background: #2F617A;
+    cursor: pointer;
+}
+
+#scrollButton > div {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #000000;
+}
+
+/********************/
+/*FIRST MEDIA QUERY*/
+/******************/
+@media screen and (min-width: 40em){
+    #mainHeader {
+        height: 10em;
+        font-size: 1.2em;
+    }
+
+    #contentContainer {
+        width: 80%;
+        padding: 1em;
+    }
+
+    #mainNav-bar-small {
+        display: none;
+    }
+
+    #mainNav-bar-med {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .postImageLink {
+        display: inline-block;
+    }
+    
+    .postImage {
+        width: 203px;
+        height: 126px;
+        font-size: 0;
+        vertical-align: middle;
+    }
+
+    /*FORMS*/
+    #formButtonWrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #formButtonWrapper > button {
+        width: 46%;
+    }
+
+    #formButtonWrapper > button + button {
+        margin-top: 0;
+    }
+
+    .imgFileWrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .imgFileWrapper > label {
+        width: 20%;
+    }
+}

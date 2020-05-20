@@ -1,0 +1,2 @@
+This is a copy of all the PHP backend files for completion.
+CORS was used to access localhost:80 (WAMP)
